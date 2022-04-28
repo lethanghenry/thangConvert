@@ -1,0 +1,31 @@
+<form #userPost="ngForm">
+  
+  <div class="form-group">
+    <label>String Nhập : </label>
+    <input type="text" class="form-control" ngModel name="inputValue" />
+  </div>
+
+  <div class="form-group">
+    <label>Xuất</label><br/>  
+    <input type="text" class="form-control" value="{{display}}" />
+  </div>  
+   
+    <br/>
+  <div class="btn-group">
+    <button type="submit" (click)="onConvertStringToBase64(userPost.value)">Convert String To Base64</button>
+    <button type="submit" (click)="onConvertStringToByte(userPost.value)">Convert String To Byte</button>
+    <button type="submit" (click)="onConvertStringToHex(userPost.value)">Convert String To Hex</button>
+
+    <button type="submit" (click)="onConvertByteToString(userPost.value)">Convert Byte To String</button>
+    <button type="submit" (click)="onConvertByteToHex(userPost.value)">Convert Byte To Hex</button>
+    <button type="submit" (click)="onConvertByteToBase64(userPost.value)">Convert Byte To Base64</button>
+
+    <button type="submit" (click)="onConvertHexToString(userPost.value)">Convert Hex To String</button>
+    <button type="submit" (click)="onConvertHexToByte(userPost.value)">Convert Hex To Byte</button>
+    <button type="submit" (click)="onConvertHexToBase64(userPost.value)">Convert Hex To Base64</button>
+
+    <button type="submit" (click)="onConvertBase64ToString(userPost.value)">Convert Base64 To String</button>
+    <button type="submit" (click)="onConvertBase64ToByte(userPost.value)">Convert Base64 To Byte</button>
+    <button type="submit" (click)="onConvertBase64ToHex(userPost.value)">Convert Base64 To Hex</button>
+  </div>
+</form>
